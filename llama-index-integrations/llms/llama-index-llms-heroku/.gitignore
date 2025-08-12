@@ -99,9 +99,6 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# Poetry
-poetry.lock
-
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
@@ -154,27 +151,3 @@ Pipfile.lock
 
 # pyright
 pyrightconfig.json
-
-# Cognee
-.data
-.env
-.local.env
-.prod.env
-cognee/.data/
-*.lance/
-.cognee_system/
-.data_storage/
-.anon_id
-SWE-bench_testsample/
-
-full_run.ipynb
-
-# Environments
-.env
-.env.local
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/

@@ -344,6 +344,7 @@ nav:
           - ./examples/llm/google_genai.ipynb
           - ./examples/llm/grok.ipynb
           - ./examples/llm/groq.ipynb
+          - ./examples/llm/heroku.ipynb
           - ./examples/llm/huggingface.ipynb
           - ./examples/llm/ibm_watsonx.ipynb
           - ./examples/llm/ipex_llm.ipynb
@@ -381,11 +382,11 @@ nav:
           - ./examples/llm/openai.ipynb
           - ./examples/llm/openai_json_vs_function_calling.ipynb
           - ./examples/llm/openai_responses.ipynb
-          - ./examples/llm/opus_4_1.ipynb
           - ./examples/llm/openrouter.ipynb
           - ./examples/llm/openvino-genai.ipynb
           - ./examples/llm/openvino.ipynb
           - ./examples/llm/optimum_intel.ipynb
+          - ./examples/llm/opus_4_1.ipynb
           - ./examples/llm/paieas.ipynb
           - ./examples/llm/palm.ipynb
           - ./examples/llm/perplexity.ipynb
@@ -979,8 +980,6 @@ nav:
           - ./api_reference/evaluation/retrieval.md
           - ./api_reference/evaluation/semantic_similarity.md
           - ./api_reference/evaluation/tonic_validate.md
-      - Graph RAG:
-          - ./api_reference/graph_rag/cognee.md
       - Indexes:
           - ./api_reference/indices/bge_m3.md
           - ./api_reference/indices/colbert.md
@@ -1041,6 +1040,7 @@ nav:
           - ./api_reference/llms/google_genai.md
           - ./api_reference/llms/gradient.md
           - ./api_reference/llms/groq.md
+          - ./api_reference/llms/heroku.md
           - ./api_reference/llms/huggingface.md
           - ./api_reference/llms/huggingface_api.md
           - ./api_reference/llms/ibm.md
@@ -1612,6 +1612,7 @@ nav:
               - ./api_reference/storage/vector_store/azurecosmosnosql.md
               - ./api_reference/storage/vector_store/bagel.md
               - ./api_reference/storage/vector_store/baiduvectordb.md
+              - ./api_reference/storage/vector_store/bigquery.md
               - ./api_reference/storage/vector_store/cassandra.md
               - ./api_reference/storage/vector_store/chatgpt_plugin.md
               - ./api_reference/storage/vector_store/chroma.md
@@ -1680,6 +1681,7 @@ nav:
           - ./api_reference/tools/agentql.md
           - ./api_reference/tools/artifact_editor.md
           - ./api_reference/tools/arxiv.md
+          - ./api_reference/tools/aws_bedrock_agentcore.md
           - ./api_reference/tools/azure_code_interpreter.md
           - ./api_reference/tools/azure_cv.md
           - ./api_reference/tools/azure_speech.md
@@ -2379,7 +2381,6 @@ plugins:
             - ../llama-index-integrations/postprocessor/llama-index-postprocessor-bedrock-rerank
             - ../llama-index-integrations/postprocessor/llama-index-postprocessor-pinecone-native-rerank
             - ../llama-index-integrations/tools/llama-index-tools-scrapegraph
-            - ../llama-index-integrations/graph_rag/llama-index-graph-rag-cognee
             - ../llama-index-integrations/llms/llama-index-llms-keywordsai
             - ../llama-index-integrations/embeddings/llama-index-embeddings-opea
             - ../llama-index-integrations/multi_modal_llms/llama-index-multi-modal-llms-bedrock
@@ -2463,6 +2464,9 @@ plugins:
             - ../llama-index-integrations/llms/llama-index-llms-cloudflare-ai-gateway
             - ../llama-index-integrations/tools/llama-index-tools-jira-issue
             - ../llama-index-integrations/voice_agents/llama-index-voice-agents-gemini-live
+            - ../llama-index-integrations/vector_stores/llama-index-vector-stores-bigquery
+            - ../llama-index-integrations/tools/llama-index-tools-aws-bedrock-agentcore
+            - ../llama-index-integrations/llms/llama-index-llms-heroku
   - redirects:
       redirect_maps:
         ./api/llama_index.vector_stores.MongoDBAtlasVectorSearch.html: api_reference/storage/vector_store/mongodb.md
