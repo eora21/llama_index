@@ -135,6 +135,7 @@ nav:
           - ./examples/cookbooks/GraphRAG_v2.ipynb
           - ./examples/cookbooks/airtrain.ipynb
           - ./examples/cookbooks/anthropic_haiku.ipynb
+          - ./examples/cookbooks/build_knowledge_graph_with_neo4j_llamacloud.ipynb
           - ./examples/cookbooks/cleanlab_tlm_rag.ipynb
           - ./examples/cookbooks/codestral.ipynb
           - ./examples/cookbooks/cohere_retriever_eval.ipynb
@@ -514,6 +515,7 @@ nav:
           - ./examples/observability/LangfuseCallbackHandler.ipynb
           - ./examples/observability/LangfuseMistralPostHog.ipynb
           - ./examples/observability/LlamaDebugHandler.ipynb
+          - ./examples/observability/Deepeval.ipynb
           - ./examples/observability/MLflow.ipynb
           - ./examples/observability/OpenInferenceCallback.ipynb
           - ./examples/observability/OpenLLMetry.ipynb
@@ -617,6 +619,7 @@ nav:
           - ./examples/tools/function_tool_callback.ipynb
           - ./examples/tools/mcp.ipynb
           - ./examples/tools/mcp_agent_tools.ipynb
+          - ./examples/tools/mcp_toolbox.ipynb
           - ./examples/tools/order_completion_agent_with_artifact_editor.ipynb
       - Transforms:
           - ./examples/transforms/TransformsEval.ipynb
@@ -824,7 +827,7 @@ nav:
               - ./module_guides/querying/response_synthesizers/index.md
               - ./module_guides/querying/response_synthesizers/response_synthesizers.md
           - Routing: ./module_guides/querying/router/index.md
-          - Workflows: ./module_guides/workflow/index.md
+          - Workflows: /workflows
           - Query Pipelines (Deprecated):
               - ./module_guides/querying/pipeline/index.md
               - ./module_guides/querying/pipeline/usage_pattern.md
@@ -841,6 +844,11 @@ nav:
           - ./module_guides/deploying/agents/tools.md
       - Workflows:
           - ./module_guides/workflow/index.md
+      - MCP:
+          - ./module_guides/mcp/index.md
+          - ./module_guides/mcp/llamaindex_mcp.md
+          - ./module_guides/mcp/llamacloud_mcp.md
+          - ./module_guides/mcp/convert_existing.md
       - Evaluation:
           - ./module_guides/evaluating/index.md
           - ./module_guides/evaluating/usage_pattern.md
@@ -980,6 +988,8 @@ nav:
           - ./api_reference/evaluation/retrieval.md
           - ./api_reference/evaluation/semantic_similarity.md
           - ./api_reference/evaluation/tonic_validate.md
+      - Graph RAG:
+          - ./api_reference/graph_rag/cognee.md
       - Indexes:
           - ./api_reference/indices/bge_m3.md
           - ./api_reference/indices/colbert.md
@@ -1511,6 +1521,7 @@ nav:
           - ./api_reference/retrievers/router.md
           - ./api_reference/retrievers/sql.md
           - ./api_reference/retrievers/summary.md
+          - ./api_reference/retrievers/superlinked.md
           - ./api_reference/retrievers/tldw.md
           - ./api_reference/retrievers/transform.md
           - ./api_reference/retrievers/tree.md
@@ -1767,6 +1778,21 @@ nav:
       - Changelog: ./CHANGELOG.md
       - Presentations: ./presentations/past_presentations.md
       - Deprecated Terms: ./changes/deprecated_terms.md
+  - Workflows:
+      - ./workflows/index.md
+      - v1:
+          - ./workflows/v1/index.md
+          - ./workflows/v1/customizing_entry_exit_points.md
+          - ./workflows/v1/drawing.md
+          - ./workflows/v1/managing_events.md
+          - ./workflows/v1/managing_state.md
+          - ./workflows/v1/retry_steps.md
+          - ./workflows/v1/resources.md
+          - ./workflows/v1/stepwise.md
+          - ./workflows/v1/deployment.md
+      - v2:
+          - ./workflows/v2/index.md
+          - ./workflows/v2
   - LlamaCloud: https://docs.cloud.llamaindex.ai/
 plugins:
   - search
@@ -2381,6 +2407,7 @@ plugins:
             - ../llama-index-integrations/postprocessor/llama-index-postprocessor-bedrock-rerank
             - ../llama-index-integrations/postprocessor/llama-index-postprocessor-pinecone-native-rerank
             - ../llama-index-integrations/tools/llama-index-tools-scrapegraph
+            - ../llama-index-integrations/graph_rag/llama-index-graph-rag-cognee
             - ../llama-index-integrations/llms/llama-index-llms-keywordsai
             - ../llama-index-integrations/embeddings/llama-index-embeddings-opea
             - ../llama-index-integrations/multi_modal_llms/llama-index-multi-modal-llms-bedrock
@@ -2467,6 +2494,8 @@ plugins:
             - ../llama-index-integrations/vector_stores/llama-index-vector-stores-bigquery
             - ../llama-index-integrations/tools/llama-index-tools-aws-bedrock-agentcore
             - ../llama-index-integrations/llms/llama-index-llms-heroku
+            - ../llama-index-integrations/retrievers/llama-index-retrievers-superlinked
+            - ../llama-index-integrations/embeddings/llama-index-embeddings-heroku
   - redirects:
       redirect_maps:
         ./api/llama_index.vector_stores.MongoDBAtlasVectorSearch.html: api_reference/storage/vector_store/mongodb.md
